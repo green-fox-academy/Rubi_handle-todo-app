@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Task implements ISave {
     private static Integer idCount = 0;
-    private Integer id;
-    private boolean isCompleted;
-    private String name;
-    private String description;
+    private final Integer id;
+    private final boolean isCompleted;
+    private final String name;
+    private final String description;
 
 
     public Task(boolean isCompleted, String name, String description) {
@@ -14,6 +14,16 @@ public class Task implements ISave {
         this.name = name;
         this.description = description;
         idCount++;
+    }
+
+    public static String createNewTask() {
+        Scanner scanner = new Scanner ( System.in );
+        System.out.println ( "give me name" );
+        String name = scanner.nextLine ();
+        System.out.println ( "give me description" );
+        String description = scanner.nextLine ();
+        Task input = new Task ( false, name, description );
+        return input.toString ();
     }
 
     public Integer getId() {
@@ -34,19 +44,11 @@ public class Task implements ISave {
 
     @Override
     public String toString() {
-        return (isCompleted?"[X]":"[ ]" )+" Task: " + name + " Description: " + description + "\n";
+        return (isCompleted ? "[X]" : "[ ]") + " Task: " + name + " Description: " + description + "\n";
     }
 
     @Override
     public void saveToFile() {
 
     }
-    public static String  createNewTask() {
-        Scanner scanner = new Scanner ( System.in );
-        System.out.println ("give me name");
-        String name = scanner.nextLine ();
-        System.out.println ("give me description");
-        String description = scanner.nextLine();
-        Task input=new Task(false,name,description);
-        return input.toString ();
-}}
+}
