@@ -1,0 +1,16 @@
+ var write = Files.write ( Paths.get ( "C:\\Users\\Anirr\\OneDrive\\Plocha\\GitHub\\Rubi_handle-todo-app\\Rubi_ToDoApp\\tasksText.txt" ), this.taskStringList );
+
+    }
+}
+
+No need to store it to a variable if you are not working with it anymore....minor stuff, but you know it is pretty hard to find something in your code :D
+
+Honestly I would just get rid of all the methods with scanner, it is quite confusing, if you can have input from argument and at the same time from scanner. 
+
+remember the SRP principle? - if you have time for that I would suggest to divided your code into more services, Eg a service/class for handling the I/O etc....there are more ways....
+
+A lot of code is in main, lets try to keep main as simple as it is :)
+
+I think you are pretty good programmer, but honestly I kinda struggle reading your code, if you can keep it simple, that would be great, not just for the mentors, but generally for your future coleagues.
+
+But overAll I think it is really good :) Great job!
