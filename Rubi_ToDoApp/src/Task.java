@@ -17,13 +17,13 @@ public class Task implements ISave {
     }
 
     public static String createNewTask() {
-        Scanner scanner = new Scanner ( System.in );
-        System.out.println ( "give me name" );
-        String name = scanner.nextLine ();
-        System.out.println ( "give me description" );
-        String description = scanner.nextLine ();
-        Task input = new Task ( false, name, description );
-        return input.toString ();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("give me name");
+        String name = scanner.nextLine();
+        System.out.println("give me description");
+        String description = scanner.nextLine();
+        Task input = new Task(false, name, description);
+        return input.toString();
     }
 
     public Integer getId() {
